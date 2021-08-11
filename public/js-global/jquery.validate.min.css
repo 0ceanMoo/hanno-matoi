@@ -1,0 +1,12 @@
+//input,select,textarea{
+  //border:1px solid #000000;
+//}
+//input.error,select.error,textarea.error{
+  //border: 1px solid #ff0000;
+//}
+label.error{
+  background-image:url('validation.png');
+  background-repeat:no-repeat;
+  padding-left:16px;
+  margin-left:.3em;
+}

@@ -1,0 +1,25 @@
+  $(function(){
+    $(".fancybox").fancybox({
+      helpers:{
+        overlay:{
+          locked:false
+        },
+        title:{
+          type:'inside'
+        }
+      }
+    });
+    if($("article#topics")[0]){
+      var cols = $("#topics").data('topics-cols');
+      var rows = $("#topics").data('topics-rows');
+      $.ajax({
+        type:'GET',
+        url:'js-global/topics.php?id=hanno-matoi&article=all&rows='+rows+'&cols='+cols,
+        dataType:'text',
+        cache:false,
+        success:function(html){
+          $("#topics").html(html);
+        }
+      });
+    }
+  });
